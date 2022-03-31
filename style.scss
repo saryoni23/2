@@ -1,0 +1,46 @@
+$background: #ebf5fc;
+
+$yellow: #f9b446;
+$pink: #ea2f98;
+
+$light-blue: #00cdfc;
+$dark-blue: #007fe8;
+
+body {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: $background;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logo {
+  margin: 100px 100px 0 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom left, $dark-blue 15%, $light-blue);
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 60px;
+    left: 60px;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(
+      to bottom left,
+      rgba(249, 180, 70, 1) 15%,
+      rgba(234, 47, 152, 0.8)
+    );
+    border-radius: 60px;
+    border: 12px solid $background;
+  }
+}
